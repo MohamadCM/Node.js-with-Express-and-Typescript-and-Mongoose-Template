@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "compile-ts": "tsc -w",
-        "run-js": "nodemon dist/App.js",
+        "run-js": "nodemon dist/src/App.js",
         "start": "eslint . --ext .ts --fix; concurrently \"lint-fix\" \"npm run compile-ts\" \"npm run run-js\"",
         "lint": "eslint . --ext .ts",
         "lint-fix": "eslint . --ext .ts --fix"

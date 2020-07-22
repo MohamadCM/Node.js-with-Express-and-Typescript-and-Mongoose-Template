@@ -10,7 +10,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "no-console": 1, // Warning if console.log exists
+    //"no-console": 1, // Warning if console.log exists
      "semi": [1, "always"] // Warning in case of no semi-coln at the end of line
   }
 }
