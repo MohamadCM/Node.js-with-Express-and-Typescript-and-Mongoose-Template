@@ -27,7 +27,7 @@ class Database {
     private constructor() {
         // Connecting to Database
         mongoose
-            .connect(this._mongoURI)
+            .connect(this._mongoURI, {useNewUrlParser: true, useUnifiedTopology: true })
             .then(()=> console.log("Mongo connected"))
             .catch(err => console.log("Error in mongo connection", err));
         //
