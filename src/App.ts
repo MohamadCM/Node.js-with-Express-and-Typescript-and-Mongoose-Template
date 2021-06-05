@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req: Request, res: Response) => {
-    res.send("Hadish sales app");
+    res.send("Hello, world!");
 });
 
 // Starting sever
