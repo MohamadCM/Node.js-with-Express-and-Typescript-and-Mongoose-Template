@@ -1,6 +1,11 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    // ...
+    "project": "./tsconfig.json"
+    // ...
+  },
   "plugins": [
     "@typescript-eslint"
   ],
@@ -11,6 +16,37 @@
   ],
   "rules": {
     //"no-console": 1, // Warning if console.log exists
-     "semi": [1, "always"] // Warning in case of no semi-coln at the end of line
+    "semi": [2, "always"], // Erorr in case of no semi-coln at the end of line
+    "max-len": [1, { "code": 120, "ignoreTrailingComments": true, "comments": 150  }], // Warning for lines with more than 80 characters
+    "@typescript-eslint/comma-dangle": [0, { // Alow comma dangle
+      "arrays": "never",
+      "objects": "never",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }],
+    "no-underscore-dangle": [0, {"allow":  []}], // Alow variable naming using _ at start
+    "radix": [0, "always"], // Allow radix
+    "no-use-before-define": 0, //Allow variables to be useb before defenition
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/no-loop-func": 0, // Error for declraing a function inside loops
+    "@typescript-eslint/no-redeclare": 0,
+    "@typescript-eslint/no-shadow": 0,
+    "no-await-in-loop": 0, //Allow await inside loops
+    "no-param-reassign": 0, //Allow reassigning function params
+    "import/no-cycle": 0, // No cyclic dependencies
+    "guard-for-in": 0, // Something I know but don't understand why
+    "import/prefer-default-export": 0, //export Default is not prefferd
+
+    "no-restricted-syntax": 0, //Using await inside loops is allows
+    "quotes": ["error", "double"], //strings must be double qouted
+    "@typescript-eslint/quotes": ["error", "double"], //strings must be double qouted
+    "indent": [1 , "tab", {"SwitchCase": 1}], //Use one tab for indent, warning if not applied
+    "@typescript-eslint/indent": [1 , "tab", {"SwitchCase": 1}], //Use one tab for indent, warning if not applied
+    "no-tabs": 0, //Allow tabs
+    "no-mixed-spaces-and-tabs": 0, //Can use space and tab in one line
+    "no-plusplus": "off", //Allow ++,
+    "@typescript-eslint/no-explicit-any": "error", // any type is not allowed
+    "@typescript-eslint/no-inferrable-types": 0
   }
 }
